@@ -1,4 +1,4 @@
-<script>
+
 window.addEventListener("load", async () => {
   const container = document.getElementById("courses-container");
   if (!container) return;
@@ -117,4 +117,4 @@ render(courses);
     }
   }
 });
-</script> 
+
