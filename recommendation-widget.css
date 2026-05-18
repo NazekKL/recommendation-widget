@@ -1,15 +1,126 @@
 
-  .new-navbar-wrap .navbar-item-wrap a{
-    height: 100%;
-    align-items: center;
-    font-size: 17px;
-    border-bottom: 2px solid transparent;
+.home .widget-custom--recommendation-widget a,
+.home .widget-custom--recommendation-widget a:link,
+.home .widget-custom--recommendation-widget a:visited,
+.home .widget-custom--recommendation-widget a:hover,
+.home .widget-custom--recommendation-widget a:active {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins";
+  
+}
+.home .widget-custom--recommendation-widget a {
+  all: unset;
+  cursor: pointer;
+  display: block; 
+}
+.home .widget-custom--recommendation-widget .recommendation-widget-item a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.recommendation-widget-item * {
+  color: black;
+}
+  .widget-custom--recommendation-widget{
+    display:flex;
+    gap:20px;
+
+    padding:20px 100px;
+    
   }
-  .new-navbar-wrap .navbar-item-wrap a:hover,
-  .new-navbar-wrap .navbar-item-wrap a:focus-within,
-  .new-navbar-wrap .navbar-item-wrap a:focus-visible
-  .new-navbar-wrap .navbar-item-wrap a:active{
-    border-color: var(--color-brand-black);
-    outline: none;
+  
+  .recommendation-widget-item{
+    border: 2px #F5F5F5 solid;
+    border-radius: 4px;
+    overflow: hidden;
+    flex: 1;
+    max-width: 900px;
+    background-color:#F5F5F5;
+    
+    
+    
+  }
+  
+  .container-content{
+  padding: 10px 20px 1px;
+  
+  
+}
+
+.container-content h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container-content p {
+  margin: 0;
+  font-size: 17px;
+  color: #555;
+  line-height: 22px
+}
+  
+  
+.container-img {
+  height: 180px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.recommendation-widget-item:hover {
+  background-color:#CBCBCB;
+
+
+}
+
+@media only screen and (max-width: 767px) {
+  .widget-custom--recommendation-widget {
+    flex-direction: column;
+    gap: 16px;
   }
 
+  .recommendation-widget-item {
+    max-width: 100%;
+  }
+}
+
+
+.skeleton-card {
+  flex: 1;
+  max-width: 900px;
+  height: 320px;
+  border-radius: 4px;
+  background: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+  
